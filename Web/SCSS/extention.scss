@@ -1,0 +1,193 @@
+@use "sass:math";
+
+@import "font";
+
+#navbar{
+    width: 80%;
+    height: 23px;
+    
+    font:{
+        size: 16px;
+        weight: bold;
+    }
+    
+    background:{
+        color: black;
+        image: url('');
+    }
+    
+    ul{
+        list-style:none;
+    }
+    
+    li{
+        font-size: 36px;
+    }
+    
+    &:hover{
+        background-color: blue;
+    }
+}
+
+div{
+    @import "font";
+}
+
+p{
+    @extend div;
+    background-color: yellow;
+}
+
+
+// 미디어 쿼리 안에서 외부의 선택자 extend 못함
+// @media print{
+//     .bar{
+//         @extend div
+//     }
+// }
+
+%input-style{
+    font-size: 14px;
+}
+
+.input-black{
+    @extend %input-style;
+    
+    color: black;
+}
+
+.input-red{
+    @extend %input-style;
+    
+    color: red;
+}
+
+$type: ocean;
+$font-small: asd;
+//그냥 if는 삼항연산자같은 느낌
+//@if는 조건문같은 느낌
+p{
+    color: if($type == ocean, blue, black);
+    @if $font-small == true{
+        font-size: 10px;
+    } @else if $font-small == false{
+        font-size: 12px;
+    } @else{
+        font-size: 14px;
+    }
+}
+
+@for $i from 1 through 3{
+    .item-#{$i}{
+        width: 2em * $i;
+        height: math.div(2em, $i);
+    }
+}
+
+$num: 1;
+@each $fruits in apple, banana, lemon, grape{
+    .#{$fruits}-#{$num}{
+        background-image: url("./images/#{$fruits}.png");
+    }
+    
+    $num: $num + 1;
+}
+
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em){
+    #{$header}{
+        font-size: $size;
+    }
+}
+
+$i: 1;
+@while $i < 6{
+    .item-#{$i}{
+        width: 2em * $i;
+    }
+    
+    $i: $i + 1;
+}
+
+@mixin circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.box{
+    @include circle;
+    background-color: blue;
+}
+
+@mixin circle($size: 50px){
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}
+
+.box{
+    @include circle(100px);
+    background-color: blue;
+}
+
+.box{
+    @include circle();
+    background-color: red;
+}
+
+@mixin vendorprefix($property, $value){
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, ''{
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+.border_radius{
+    @include vendorprefix(transition, 0.5s);
+}
+
+@mixin opacity($opacity){
+    opacity: $opacity;
+    $opacityIE: $opacity * 100;
+    filter: alpha(opacity=$opacityIE);
+}
+
+.box{
+    @include opacity(0.5);
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+.box{
+    @include position(absolute, $top: 10px, $left: 5px);
+    @include position(relative, 10px, 5px, 5px);
+}
+
+$grid-width: 40px;
+$gutter-width: 10px;
+@function grid-width($n){
+    @return $n * $grid-width + ($n - 1) + $gutter-width;
+}
+
+.sidebar{
+    width: grid-width(5);
+}
+
+/*@function grid-width($n){
+    @return $n * 5px;
+}
+
+.sidebar{
+    width: grid-width(5);
+}*/
+
+// 주석 comment
+
+p{
+    color: white;
+}

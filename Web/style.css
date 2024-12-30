@@ -1,0 +1,599 @@
+/* #bs{
+    box-sizing: border-box;
+    text-align: center;
+    border-style: dashed dotted double solid;
+    border-width: medium;
+    background-color: violet;
+    border-radius: 20px;
+    line-height: 90px;
+    border: 5px dotted red;
+    height: 100px;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+#span{
+    visibility: hidden;
+    border: 3px solid green;
+}
+
+#opacity{
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+    opacity: 0.5;
+    word-break: break-all;
+}
+
+#image{
+    height: 100px;
+    background-image: url("http://poiemaweb.com/img/bg/dot.png"), url("http://poiemaweb.com/img/bg/paper.gif");
+    background-repeat: no-repeat, repeat-x;
+    background-size: 50px 50px;
+    background-size: cover;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    background: skyblue url("http://poiemaweb.com/img/bg/dot.png") repeat fixed center;
+}
+
+#font{
+    font-family: "Times New Roman", Times, sans-serif;
+    font-style: italic;
+    font-weight: 1200;
+    font: italic small-caps bolder 2em/3 sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    text-decoration: underline;
+    white-space: pre-line;
+}
+
+.carousel-view {
+      display: inline-block;
+      position: relative;
+      margin: 0 auto;
+      border: 1px dotted red;
+}
+
+.carousel-container {
+  white-space: nowrap;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-item {
+  display: inline-block;
+  list-style: none;
+  padding: 5px;
+}
+
+.carousel-item:last-child {
+  margin-right: 0;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.carousel-control:focus {
+  outline: none;
+}
+
+.carousel-control.prev {
+  left: 0;
+}
+
+.carousel-control.next {
+  right: 0;
+} */
+
+
+
+
+
+
+/* div{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 6px;
+    border-color: grey;
+    border-style: dotted;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.clip{
+    text-overflow: clip;
+}
+
+.ellipsis{
+    text-overflow: ellipsis;
+} */
+
+
+
+
+
+
+/* div {
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+      margin: 40px;
+      border-radius: 6px;
+      border-color: gray;
+      border-style: dotted;
+}
+
+.word-wrap{
+    word-wrap: break-word;
+}
+
+.word-break{
+    word-break: break-all;
+    overflow-y: scroll;
+} */
+
+
+
+
+
+/* .box {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 10px;
+}
+.d1 {
+    float: left;
+    background: red;
+}
+.d2 {
+    overflow: hidden;
+    background: orange;
+} */
+
+
+
+
+
+/* .container{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: #def0c2;
+}
+
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.d1, .d2{
+    float: left;
+    width: 50%;
+    padding: 20px 0;
+}
+
+.d1{
+    background-color: #59b1f6;
+}
+
+.d2{
+    background-color: #ffb5b4;
+} */
+
+
+
+
+/* .text-red{
+    color: red;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+.text-red p{
+    border: inherit;
+    padding: inherit;
+}
+
+.text-red button{
+    color: inherit;
+} */
+
+
+
+
+
+/* h1{
+    text-shadow: 5px 5px 2px grey, -1px -1px 5px violet;
+    box-shadow: Inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), Inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+
+
+
+
+/* div{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    transition: all 2s ease 0.5s;
+}
+
+div:hover{
+    border-radius: 50%;
+    background-color: blue;
+} */
+
+
+/* div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: move, fadeOut, changeColor;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: both;
+    animation: move fadeOut changeColor 2s ease 0.5s 2 reverse forwards; 
+}
+
+div:hover{
+    animation-play-state: paused;
+}
+
+@keyframes move{
+    from{
+        left: 0;
+    }
+    
+    50%{
+        left: 150px;
+    }
+    
+    to{
+        left: 300px;
+    }
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes changeColor{
+    from{
+        background-color: red;
+    }
+    50%{
+        background-color: blue;
+    }
+    to{
+        background-color: violet;
+    }
+} */
+
+
+
+
+
+
+/* .box{
+    width: 95px;
+    height: 95px;
+    line-height: 95px;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+}
+.original{
+    margin: 30px;
+    border: 1px dashed #cecfd5;
+    background: #eaeaed;
+    float: left;
+}
+.child{
+    background: #2db34a;
+    cursor: pointer;
+}
+.translate{
+    transform: translate(10px, 50px);
+}
+.scale{
+    transform-origin: 0 0;
+    transform: scale(0.5);
+}
+
+.skew{
+    transform: skew(5deg, -20deg);
+}
+
+.rotate{
+    transform: rotate(70deg);
+}
+
+.complex{
+    transform: scale(0.5) rotate(20deg);
+    transition: transform 2s;
+}
+
+.complex:hover{
+    transition: all 2s ease-in-out;
+    transform: scale(1) rotate(0);
+} */
+
+
+
+
+
+
+
+/* @font-face{
+    font-family: "Nanum Gothic";
+    src:url("NanumGothic.eot");
+    src:local("☺"),
+        url("NanumGothic.woff") format('woff');
+}
+
+*{
+    font-family: "Nanum Gothic";
+} */
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f0f3f4;
+}
+
+h1{
+    font-size: 1.8em;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 10px 5px;
+}
+
+#wrap{
+    position: relative;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 2000;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+header .logo{
+    display: inline-block;
+    height: 36px;
+    margin: 12px;
+}
+
+header .logo img{
+    height: 36px;
+}
+
+header .nav{
+    float: right;
+    list-style: none;
+}
+
+header .nav li{
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 60px;
+}
+
+header .nav a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+header .nav a:hover{
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#content-wrap{
+    position: relative;
+    margin-top: 60px;
+}
+
+#content-wrap:after{
+    content="";
+    display: block;
+    clear: both;
+}
+
+aside{
+    position: fixed;
+    top: 60px;
+    padding-top: 25px;
+    background-color: #333;
+    width: 200px;
+    height: 100%;
+}
+
+aside > h1{
+    color: #fff;
+    padding : 20px 0 20px 20px;
+}
+
+aside > ul{
+    list-style: none;
+    padding-top: 20px;
+}
+
+aside > ul > li > a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0 5px 20px;
+}
+
+aside > ul > li > a.active{
+    background-color: #4CAF50;
+}
+
+aside > ul > li > a:hover:not(.active){
+    background-color: #555;
+}
+
+section{
+    float: right;
+    margin-left: 200px;
+}
+
+article{
+    margin: 10px;
+    padding: 25px;
+    background-color: white;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #8a8c8f;
+    border-top: 1px solid #dee5e7;
+    background-color: #f2f2f2;
+}
+
+.nav-toggle,
+.navicon{
+    display: none;
+}
+
+@media screen and (max-width: 625px){
+    header{
+        height: 60px;
+        text-align: center;
+    }
+    
+    #wrap{
+        margin-top: 120px;
+    }
+    
+    aside{
+        top: 120px;
+    }
+    
+    .nav{
+        display: none;
+    }
+    
+    .navicon{
+        display: block;
+        cursor: pointer;
+        height: 60px;
+        padding: 28px 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .navicon-bar{
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: #333;
+        transition: background-color 0.2s ease-out;
+    }
+    
+    .navicon-bar::before,
+    .navicon-bar::after{
+          background-color: #333;
+          display: block;
+          position: relative;
+          transition: background-color .2s ease-out;
+          width: 20px;
+          height: 3px;
+    }
+    
+    .navicon-bar::before{
+        top: -7px;
+    }
+    
+    .navicon-bar::after{
+        top: 7px;
+    }
+    
+    .nav-toggle:checked ~ .navicon > .navicon-bar{
+        background: transparent;
+    }
+    
+    .nav-toggle:checked ~ .navicon > .navicon-bar::before{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    .nav-toggle:checked ~ .navicon > .navicon-bar::after{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    
+    .nav-toggle:checked ~ .nav{
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav > li{
+        display: block;
+    }
+    
+    .nav > li > a{
+        line-height: 50px;
+    }
+}

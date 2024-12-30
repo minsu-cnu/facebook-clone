@@ -1,0 +1,75 @@
+.box{
+    border-radius: percentage(0.5);
+    width: round(14.5px);
+    height: ceil(7.2px);
+    line-height: floor(2.7px);
+    font-size: abs(-12px);
+    font: type-of(blue);
+    font: unit(120px);
+    font: unit(100);
+    font: unit(50px * 5em);
+    font: unitless(100);
+    font: unitless(100px);
+    font: comparable(100px, 2em);
+    
+    font-family: quote(foo);
+    font-family: quote("foo");
+    font-family: unquote("foo");
+    font-size: length(1px 2px 3px);
+    font-size: length((width: 5px, height: 10px));
+    font-size: nth(10px 20px 30px, 3);
+    font-size: nth((width: 10px, height: 20px), 2);
+    font-size: index((width: 10px, height: 20px), (height 20px));
+    font-size: index(1px solid red, red);
+    font-size: nth(append(10px 20px, 30px), 3);
+    font: append((red, blue), green);
+    font: append((red, blue), green, space);
+    font: append(10px 20px, 30px, comma);
+    font: join(10px 20px, 30px 40px);
+    font: join((width: 10px, height: 20px), (line-height: 50px), space);
+    font: zip((1px 1px 3px), (solid dashed dotted), (red green blue));
+    font-size: map-get((small: 10px, medium: 12px, regular: 14px), regular);
+    
+    $base-color: #ad141e;
+    
+    .adjust-hue{
+        color: adjust-hue($base-color, 20%);
+    }
+    
+    .saturate{
+        color: saturate($base-color, 20%);
+    }
+    
+    .desaturate{
+        color: desaturate($base-color, 20%);
+    }
+    
+    .darken{
+        color: darken($base-color, 10%);
+    }
+    
+    .lighten{
+        color: lighten($base-color, 10%);
+    }
+    
+    .rgba{
+        color: rgba($base-color, .7);
+    }
+    
+    .opacify{
+        color: opacify($base-color, 0.3);
+    }
+    
+    .transparentize{
+        color: transparentize($base-color, 0.25);
+    }
+    
+    .tint{
+        color: tint($base-color, 10%);
+    }
+    
+    .shade{
+        color: shade($base-color, 10%);
+    }
+    
+}

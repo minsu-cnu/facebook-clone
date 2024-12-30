@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML5, CSS, JS, Facebook">
+  <meta name="author" content="minsu">
+  <meta name="description" content="Clone Coding">
+  <title>Facebook_clone</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/872494f80f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- header -->
+    <header>
+      <div class="logo-search">
+        <div class="logo">
+          <a href="#" class="func-btn logo__link">
+            <i class="logo__icon fa-brands fa-facebook"></i>
+          </a>
+        </div>
+        <div class="search">
+          <i class="func-btn__icon fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="search__input" placeholder="Facebook 검색">
+        </div>
+      </div>
+      <div class="nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--selected">
+            <a href="#" class="nav__link nav__link--selected">
+              <i class="nav__icon icon-normal nav__icon--selected fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="nav__icon icon-normal fa-solid fa-user-group"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="nav__icon icon-normal fa-solid fa-circle-play"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="nav__icon icon-normal fa-solid fa-users-rectangle"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="nav__icon icon-normal fa-solid fa-bars"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="toolbar">
+        <ul class="toolbar__list">
+          <li class="toolbar__item">
+            <button class="toolbar__link func-btn blink">
+              <i class="func-btn__icon fa-solid fa-border-all"></i>
+            </button>
+          </li>
+          <li class="toolbar__item">
+            <button class="toolbar__link func-btn blink">
+              <i class="func-btn__icon fa-brands fa-facebook-messenger"></i>
+            </button>
+          </li>
+          <li class="toolbar__item">
+            <button class="toolbar__link func-btn blink">
+              <i class="func-btn__icon fa-solid fa-bell"></i>
+            </button>
+          </li>
+          <li class="toolbar__item">
+            <button class="toolbar__link func-btn blink">
+              <img class="func-btn__img" src="./src/profile.png" alt="profile">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- aside-left -->
+    <aside class="aside-left">
+      <ul class="aside-left__list">
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn">
+              <img class="aside-btn__img" src="./src/profile.png" alt="img">
+            </div>
+            <span>배코딩</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-user-group" style="color: #2a8ef6;"></i>
+            </div>
+            <span>친구</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-users-rectangle" style="color: lightblue;"></i>
+            </div>
+            <span>그룹</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-circle-play" style="background: linear-gradient(135deg, rgba(65,206,192,1) 0%, rgba(32,136,233,1) 35%, rgba(24,119,242,1) 100%);
+                -webkit-background-clip: text;
+                  color: transparent;"></i>
+            </div>
+            <span>Watch</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-clock" style="border: 3px solid #2983f3;
+                border-radius: 50%;
+              "></i>
+            </div>
+            <span>과거의 오늘</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-bookmark" style="background: linear-gradient(170deg, rgba(210,47,164,1) 0%, rgba(148,57,208,1) 35%, rgba(114,61,221,1) 100%);
+                -webkit-background-clip: text;
+                  color: transparent;
+                
+              "></i>
+            </div>
+            <span>저장됨</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-flag" style="color: #f97c2e;"></i>
+            </div>
+            <span>페이지</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-calendar-check" style="color: #f65873;"></i>
+            </div>
+            <span>이벤트</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-radio" style="color: #2f89f5;"></i>
+            </div>
+            <span>최신</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-star" style="background: linear-gradient(180deg, rgba(251,220,93,1) 0%, rgba(247,196,60,1) 35%, rgba(242,174,31,1) 100%);
+                -webkit-background-clip: text;
+                  color: transparent;
+                
+              "></i>
+            </div>
+            <span>즐겨찾기</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn aside-btn--noback">
+              <i class="icon-normal fa-solid fa-signal" style="background: linear-gradient(180deg, rgba(36,175,254,1) 0%, rgba(30,145,247,1) 35%, rgba(25,122,241,1) 100%);
+                -webkit-background-clip: text;
+                  color: transparent;
+                
+              "></i>
+            </div>
+            <span>광고 관리자</span>
+          </a>
+        </li>
+        <li class="aside-left__item">
+          <a href="#" class="aside-left__link icon-and-text">
+            <div class="aside-btn">
+              <i class="aside-btn__icon fa-solid fa-chevron-down"></i>
+            </div>
+            <span>더 보기</span>
+          </a>
+        </li>
+      </ul>
+      <div class="aside-left__footer">
+        <a href="#" class="aside-left__footer-link">개인정보처리방침</a>
+        ·
+        <a href="#" class="aside-left__footer-link">약관</a>
+        ·
+        <a href="#" class="aside-left__footer-link">광고</a>
+        ·
+        <a href="#" class="aside-left__footer-link">AdChoices</a>
+        ·
+        <a href="#" class="aside-left__footer-link">쿠키</a>
+        ·
+        <a href="#" class="aside-left__footer-link">더보기</a>
+        ·
+        <span>Meta ㉿ 2022</span>
+      </div>
+    </aside>
+    <!-- main -->
+    <main class="main">
+      <div class="story">
+        <ul class="story__list">
+          <li class="story__item">
+            <a href="#" class="story__brightness"></a>
+            <div class="story__view">
+              <img src="./src/profile.png" alt="profile" class="story__thumbnail">
+              <div class="story__info story__info--make">
+                <div class="story__status story__status--make">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <h5>스토리 만들기</h5>
+              </div>
+              <div class="story__backboard"></div>
+            </div>
+          </li>
+          <li class="story__item">
+            <a href="#" class="story__brightness"></a>
+            <div class="story__view">
+              <img src="./src/han.jpg" alt="profile" class="story__thumbnail">
+              <div class="story__info">
+                <div class="story__status">
+                  <img src="./src/math_bible.jpeg" alt="profile" class="story__status-img">
+                </div>
+                <h5>한석원</h5>
+              </div>
+            </div>
+          </li>
+          <li class="story__item">
+            <a href="#" class="story__brightness"></a>
+            <div class="story__view">
+              <img src="./src/F-15K.jpeg" alt="profile" class="story__thumbnail">
+              <div class="story__info">
+                <div class="story__status">
+                  <img src="./src/ROKAF.jpg" alt="profile" class="story__status-img">
+                </div>
+                <h5>탑건</h5>
+              </div>
+            </div>
+          </li>
+          <li class="story__item">
+            <a href="#" class="story__brightness"></a>
+            <div class="story__view">
+              <img src="./src/wyw.jpg" alt="profile" class="story__thumbnail">
+              <div class="story__info">
+                <div class="story__status">
+                  <img src="./src/wyw_poster.jpg" alt="profile" class="story__status-img">
+                </div>
+                <h5>우영우</h5>
+              </div>
+            </div>
+          </li>
+          <li class="story__item">
+            <a href="#" class="story__brightness"></a>
+            <div class="story__view">
+              <img src="./src/dongsuk.jpg" alt="profile" class="story__thumbnail">
+              <div class="story__info">
+                <div class="story__status">
+                  <img src="./src/avengers.jpg" alt="profile" class="story__status-img">
+                </div>
+                <h5>매댕색</h5>
+              </div>
+            </div>
+          </li>
+          <li class="story__item">
+            <a href="#" class="story__brightness"></a>
+            <div class="story__view">
+              <img src="./src/tekken7.jpeg" alt="profile" class="story__thumbnail">
+              <div class="story__info">
+                <div class="story__status">
+                  <img src="./src/anime.jpg" alt="profile" class="story__status-img">
+                </div>
+                <h5>철권고수</h5>
+              </div>
+            </div>
+          </li>
+          <li class="story__item">
+            <a href="#" class="story__brightness"></a>
+            <div class="story__view">
+              <img src="./src/driving.jpeg" alt="profile" class="story__thumbnail">
+              <div class="story__info">
+                <div class="story__status">
+                  <img src="./src/moon.jpeg" alt="profile" class="story__status-img">
+                </div>
+                <h5>초보운전</h5>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="story__expand func-btn blink">
+          <i class="func-btn__icon fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <section class="post main-article">
+        <div class="post__write">
+          <a href="#" class="post__profile func-btn blink--img">
+            <img class="func-btn__img" src="./src/profile.png" alt="profile">
+          </a>
+          <button class="post__thinking search blink">
+            배코딩님, 무슨 생각을 하고 계신가요?
+          </button>
+        </div>
+        <hr class="horizontal-line">
+        <div class="post__toggle">
+          <button class="post__toggle-btn action">
+            <div class="icon-wrap">
+              <i class="post__icon fa-solid fa-video" style="color: #f3425f;"></i>
+            </div>
+            <span>라이브 방송</span>
+          </button>
+          <button class="post__toggle-btn action">
+            <div class="icon-wrap">
+              <i class="post__icon fa-regular fa-images" style="color: lightgreen;"></i>
+            </div>
+            <span>사진/동영상</span>
+          </button>
+          <button class="post__toggle-btn action">
+            <div class="icon-wrap">
+              <i class="post__icon fa-regular fa-face-laugh" style="color: orange;"></i>
+            </div>
+            <span>기분/활동</span>
+          </button>
+        </div>
+      </section>
+      <section class="rooms main-article">
+        <button class="rooms__making blink">
+          <div class="icon-wrap">
+            <i class="rooms__icon fa-solid fa-video"></i>
+          </div>
+          <span class="rooms__text">룸스 만들기</span>
+        </button>
+        <ul class="rooms__list">
+          <li class="rooms__item">
+            <button class="rooms__profile aside-btn">
+              <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+            </button>
+          </li>
+          <li class="rooms__item">
+            <button class="rooms__profile aside-btn">
+              <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+            </button>
+          </li>
+          <li class="rooms__item">
+            <button class="rooms__profile aside-btn">
+              <img class="aside-btn__img" src="./src/han.jpg" alt="profile">
+            </button>
+          </li>
+          <li class="rooms__item">
+            <button class="rooms__profile aside-btn">
+              <img class="aside-btn__img" src="./src/wyw.jpg" alt="profile">
+            </button>
+          </li>
+        </ul>
+      </section>
+      <article class="posting main-article">
+        <div class="posting__title">
+          <div class="posting__info">
+            <button class="posting__profile func-btn">
+              <img class="func-btn__img blink--img" src="./src/profile.png" alt="profile">
+            </button>
+            <ul class="posting__head">
+              <li><a href="#" class="posting__username">배코딩</a></li>
+              <li>
+                <span class="posting__time">어제 오후 7:29 · </span>
+                <i class="posting__global fa-solid fa-earth-americas"></i>
+              </li>
+            </ul>
+          </div>
+          <button class="posting__moreBtn aside-btn aside-btn--noback blink">
+            <i class="func-btn__icon fa-solid fa-ellipsis"></i>
+          </button>
+        </div>
+        <p class="posting__paragraph">
+          아 전역하고싶다<br>
+          말년에 제일 시간이 안간다더니 팩트였다 시간이 정말 뒤지게 안간다<br>
+          그것도 문제지만 내년 3월에 있는 SW 마에스트로 시험도 걱정이다..<br><br>
+          면접까지 합격해야 최종 선발이지만 지금껏 코딩 테스트를 열심히 대비해왔으니<br>
+          일단은 그걸 좀 붙고 싶다..<br><br>
+          아 모르겠고 일단 전역 좀 시켜줘요!!!<br>
+        </p>
+        <button class="posting__appendix img-single">
+          <img src="./src/discharge.jpg" alt="appendix">
+        </button>
+        <div class="posting__comment-info">
+          <div class="posting__emotion-wrap">
+            <button class="posting__emotion">
+              <i class="posting__emotion-icon fa-solid fa-thumbs-up"></i>
+            </button>
+            <a href="#" class="posting__emotion-count">2</a>
+          </div>
+          <button class="posting__comment-expand">댓글 3개</button>
+        </div>
+        <div class="posting__actions">
+          <button class="posting__action action">
+            <i class="posting__action-icon fa-solid fa-thumbs-up"></i>
+            <span class="posting__action-text">좋아요</span>
+          </button>
+          <button class="posting__action action">
+            <i class="posting__action-icon fa-solid fa-message"></i>
+            <span class="posting__action-text">댓글 달기</span>
+          </button>
+          <button class="posting__action action">
+            <i class="posting__action-icon fa-solid fa-share"></i>
+            <span class="posting__action-text">공유하기</span>
+          </button>
+        </div>
+        <div class="posting__comment">
+          <div class="posting__filter-wrap">
+            <button class="posting__filter">
+              <span class="posting__filter-text">관련성 높은 댓글</span>
+              <i class="posting__filter-icon fa-solid fa-caret-down"></i>
+            </button>
+          </div>
+          <div class="posting__write">
+            <div class="posting__write-wrap">
+              <a href="#" class="posting__profile posting__comment-profile func-btn">
+                <img class="posting__profile-img func-btn__img" src="./src/profile.png" alt="profile">
+              </a>
+              <div class="posting__input-wrap">
+                <div style="position: relative;">
+                  <input type="text" class="posting__input search" placeholder="댓글을 입력하세요...">
+                  <ul class="posting__input-toggles">
+                    <li>
+                      <button class="posting__input-toggle">
+                        <i class="posting__input-icon fa-brands fa-grav"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="posting__input-toggle">
+                        <i class="posting__input-icon fa-regular fa-face-smile"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="posting__input-toggle">
+                        <i class="posting__input-icon fa-solid fa-camera"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="posting__input-toggle">
+                        <i class="posting__input-icon fa-solid fa-gift"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="posting__input-toggle">
+                        <i class="posting__input-icon fa-regular fa-note-sticky"></i>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <span class="posting__input-text">글을 게시하려면 Enter 키를 누르세요.</span>
+              </div>
+            </div>
+            <div class="posting__write-wrap">
+              <a href="#" class="posting__profile posting__comment-profile func-btn">
+                <img class="posting__profile-img func-btn__img" src="./src/dongsuk.jpg" alt="profile">
+              </a>
+              <div class="posting__written">
+                <div class="posting__written-wrap">
+                  <strong class="posting__written-user">매댕색</strong>
+                  <p class="posting__written-text">거 반으로 접히기 싫으면 불평하지말고 근무나 더 뛰쇼</p>
+                </div>
+                <div class="posting__written-toggles">
+                  <button class="posting__written-toggle">좋아요</button>
+                  <button class="posting__written-toggle">답글 달기</button>
+                  <button class="posting__written-toggle">1분 전</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <!-- aside-right -->
+    <aside class="aside-right">
+      <article class="aside-right__article">
+        <h3 class="aside-right__title">광고</h3>
+        <ul class="aside-right__list">
+          <li class="aside-right__item">
+            <a href="#" class="aside-right__ad icon-and-text">
+              <div class="img-single">
+                <img src="./src/tuna.png" alt="tuna">
+              </div>
+              <div class="aside-right__ad-info">
+                <h5 class="aside-right__ad-titie">
+                  참치는 역시 동원참치! 고순조에 얹어 먹으면 밥도둑
+                </h5>
+                <p class="aside-right__ad-link">
+                  mynameistuna.bcd.com
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="aside-right__item">
+            <a href="#" class="aside-right__ad icon-and-text">
+              <div class="img-single">
+                <img src="./src/IU.jpg" alt="IU">
+              </div>
+              <div class="aside-right__ad-info">
+                <h5 class="aside-right__ad-titie">
+                  와! 참이슬 와! 아이유
+                </h5>
+                <p class="aside-right__ad-link">
+                  alcoholdrinking.bcd.com
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </article>
+      <hr class="horizontal-line">
+      <article class="aside-right__article">
+        <h3 class="aside-right__title">연락처</h3>
+        <div class="aside-right__contact-toggle">
+          <button class="aside-right__contact-rooms aside-btn aside-btn--noback">
+            <i class="func-btn__icon fa-solid fa-video"></i>
+          </button>
+          <button class="aside-right__contact-rooms aside-btn aside-btn--noback">
+            <i class="func-btn__icon fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="aside-right__contact-rooms aside-btn aside-btn--noback">
+            <i class="func-btn__icon fa-solid fa-ellipsis"></i>
+          </button>
+        </div>
+        <ul class="aside-right__contact-list">
+          <li class="aside-right__contact-item">
+            <a href="#" class="aside-right__contact-btn icon-and-text">
+              <div class="aside-right__contact-profile aside-btn">
+                <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+              </div>
+              <span>김아무개1</span>
+            </a>
+          </li>
+          <li class="aside-right__contact-item">
+            <a href="#" class="aside-right__contact-btn icon-and-text">
+              <div class="aside-right__contact-profile aside-btn">
+                <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+              </div>
+              <span>김아무개2</span>
+            </a>
+          </li>
+          <li class="aside-right__contact-item">
+            <a href="#" class="aside-right__contact-btn icon-and-text">
+              <div class="aside-right__contact-profile aside-btn">
+                <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+              </div>
+              <span>김아무개3</span>
+            </a>
+          </li>
+          <li class="aside-right__contact-item">
+            <a href="#" class="aside-right__contact-btn icon-and-text">
+              <div class="aside-right__contact-profile aside-btn">
+                <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+              </div>
+              <span>김아무개4</span>
+            </a>
+          </li>
+          <li class="aside-right__contact-item">
+            <a href="#" class="aside-right__contact-btn icon-and-text">
+              <div class="aside-right__contact-profile aside-btn">
+                <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+              </div>
+              <span>김아무개5</span>
+            </a>
+          </li>
+          <li class="aside-right__contact-item">
+            <a href="#" class="aside-right__contact-btn icon-and-text">
+              <div class="aside-right__contact-profile aside-btn">
+                <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+              </div>
+              <span>김아무개6</span>
+            </a>
+          </li>
+          <li class="aside-right__contact-item">
+            <a href="#" class="aside-right__contact-btn icon-and-text">
+              <div class="aside-right__contact-profile aside-btn">
+                <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+              </div>
+              <span>김아무개7</span>
+            </a>
+          </li>
+          <li class="aside-right__contact-item">
+            <a href="#" class="aside-right__contact-btn icon-and-text">
+              <div class="aside-right__contact-profile aside-btn">
+                <img class="aside-btn__img" src="./src/default_profile.png" alt="profile">
+              </div>
+              <span>김아무개8</span>
+            </a>
+          </li>
+        </ul>
+      </article>
+      <hr class="horizontal-line">
+      <article class="aside-right__article">
+        <h3 class="aside-right__title">그룹 대화</h3>
+        <ul class="aside-right__group-list">
+          <li class="aside-right__group-item">
+            <a href="#" class="aside-right__group-btn icon-and-text">
+              <div class="func-btn">
+                <i class="func-btn__icon fa-solid fa-plus"></i>
+              </div>
+              <span>새 그룹 만들기</span>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </aside>
+    <button class="message func-btn blink">
+      <i class="func-btn__icon fa-solid fa-pen-to-square"></i>
+    </button>
+  </div>
+</body>
+</html>

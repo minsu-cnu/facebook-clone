@@ -1,0 +1,100 @@
+@import "variables";
+@import "partial";
+
+.aside-right {
+  grid-area: side-b;
+  padding: $spacing-medium $spacing-small 0 0;
+  
+  hr {
+    margin: $spacing-medium;
+  }
+  
+  &__title {
+    margin: $spacing-medium;
+    color: $color-grey-lighten;
+  }
+  
+  &__ad {
+    justify-content: space-between;
+    color: white;
+    
+    .img-single {
+      flex: 0 0 35%;
+      overflow: hidden;
+      margin-right: $spacing-small;
+      border-radius: 5px;
+    }
+    
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 0 55%;
+    }
+    
+    &-link {
+      font-size: $font-size-small;
+      color: $color-grey-lighten;
+    }
+  }
+  
+  &__article {
+    position: relative;
+  }
+  
+  &__contact {
+    &-toggle {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: $spacing-small;
+    }
+    
+  
+    &-rooms {
+      margin-right: $spacing-small;
+      padding: $spacing-small + 3px;
+      width: auto;
+      height: auto;
+      border-radius: 50%;
+      
+      &:hover {
+        background-color: darken($color-grey-lighten, 55%);
+      }
+      
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      i {
+        font-size: $font-size-regular;
+        color: $color-grey-lighten;
+      }
+    }
+    
+    &-profile {
+      margin-right: $spacing-medium;
+    }
+    
+    &-btn {
+      span {
+        color: white;
+      }
+    }
+  }
+  
+  &__group {
+    &-btn {
+      .func-btn {
+        margin-right: $spacing-medium;
+        width: $btn-size * 0.8;
+        height: $btn-size * 0.8;
+      }
+      
+      span {
+        color: white;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,16 @@
+body {
+  font: 16px/1.5 "Lucida Grande";
+}
+
+.example {
+  color: red;
+}
+
+#main body {
+  font: 16px/1.5 "Lucida Grande";
+}
+#main .example {
+  color: red;
+}
+
+/*# sourceMappingURL=main.css.map */

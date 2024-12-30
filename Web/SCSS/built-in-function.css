@@ -1,0 +1,63 @@
+.box {
+  border-radius: 50%;
+  width: 15px;
+  height: 8px;
+  line-height: 2px;
+  font-size: 12px;
+  font: color;
+  font: "px";
+  font: "";
+  font: "px*em";
+  font: true;
+  font: false;
+  font: false;
+  font-family: "foo";
+  font-family: "foo";
+  font-family: foo;
+  font-size: 3;
+  font-size: 2;
+  font-size: 30px;
+  font-size: height 20px;
+  font-size: 2;
+  font-size: 3;
+  font-size: 30px;
+  font: red, blue, green;
+  font: red blue green;
+  font: 10px, 20px, 30px;
+  font: 10px 20px 30px 40px;
+  font: width 10px height 20px line-height 50px;
+  font: 1px solid red, 1px dashed green, 3px dotted blue;
+  font-size: 14px;
+}
+.box .adjust-hue {
+  color: #ad3d14;
+}
+.box .saturate {
+  color: #c0010d;
+}
+.box .desaturate {
+  color: #9a272f;
+}
+.box .darken {
+  color: #7f0f16;
+}
+.box .lighten {
+  color: #db1926;
+}
+.box .rgba {
+  color: rgba(173, 20, 30, 0.7);
+}
+.box .opacify {
+  color: #ad141e;
+}
+.box .transparentize {
+  color: rgba(173, 20, 30, 0.75);
+}
+.box .tint {
+  color: tint(#ad141e, 10%);
+}
+.box .shade {
+  color: shade(#ad141e, 10%);
+}
+
+/*# sourceMappingURL=built-in-function.css.map */

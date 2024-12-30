@@ -1,0 +1,121 @@
+@use "sass:math";
+@use "sass:color";
+
+$color: (
+    black: #ffffff,
+    white: #000000
+);
+
+$font_size: 16px;
+
+$name: foo;
+$attr: border;
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('./src/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    $font_size: 12px;
+    font-size: $font_size;
+    list-style: none;
+}
+
+a{
+    $line_height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    color: map-get($color, white);
+    color: color.mix(#010203, #040506, 50%);
+    color: opacify(rgba(255, 0, 0, 0.3), 0.4);
+    color: transparentize(rgba(255, 0, 0, 0.5), 0.2);
+    font-size: math.div($font_size, 4);
+    font-size: (16px / 4);
+    font-size: 0 + 16px / 4;
+    font: 16px / 4;
+    font: #{$font-size}/#{$line-height};
+    padding: calc(15px + 2em);
+    padding: 5% + 15%;
+    font-family: sans + -serif, "sans" + -serif;
+    cursor: p + ointer;
+}
+
+p.#{$name}{
+    #{$attr}-radius: 50%;
+    > img{
+        display: block;
+    }
+    &.active{
+        visible: hidden;
+    }
+}
+
+.font{
+    font:{
+        size: 12px;
+        family: sans-serif;
+        weight: bold;
+    }
+}
+
+$family: "Open+Sans";
+@import url("http://fonts.googleapis.com/css?family=#{$family}");
+
+.error{
+    border: 1px solid black;
+    background-color: blue;
+}
+
+.seriuosError{
+    @extend .error;
+    
+    border-width: 3px;
+    border-color: darkblue;
+}
+
+%input-style{
+    font-size: 14px;
+}
+
+.input-black{
+    @extend %input-style;
+    
+    color: black;
+}
+
+.input-red{
+    @extend %input-style;
+    
+    color: red;
+}
+
+$type: ocean3;
+
+p{
+    color: if($type == ocean, blue, black);
+}
+
+p{
+    @if $type == ocean1{
+        color: blue;
+    } @else if $type == ocean2{
+        color: red;
+    } @else if $type == ocean3{
+        color: green;
+    } @else{
+        color: black;
+    }
+}
+
+@for $i from 1 through 3{
+    .item-#{$i}{
+        width: 2em * $i;
+    }
+}

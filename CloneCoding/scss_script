@@ -1,0 +1,5 @@
+cd ..
+cd CloneCoding
+cd Facebook
+export PATH="./dart-sass:$PATH"
+sass --watch style.scss style.css

@@ -1,0 +1,440 @@
+@import "variables";
+@import "partial";
+
+main {
+  margin: $spacing-medium $spacing-large;
+  background-color: $color-grey-deep-dark;
+  grid-area: main;
+}
+
+.story {
+  position: relative;
+
+  &__list {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  &__item {
+    position: relative;
+    overflow: hidden;
+    min-width: 110px;
+    margin: $spacing-medium $spacing-small $spacing-medium 0;
+    border-radius: 12px;
+    flex: 1 1 20%;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  &__view {
+    display: block;
+    position: relative;
+    height: 100%;
+  }
+  
+  &__thumbnail {
+    width: 100%;
+    height: 100%;
+    transition: transform linear 0.1s;
+    object-fit: cover;
+  }
+  
+  &__status {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: $btn-size * 0.8;
+    height: $btn-size * 0.8;
+    border: 4px solid $color-blue;
+    border-radius: 50%;
+  
+    &--make {
+      border-width: 3px;
+      border-color: $color-grey-dark;
+      background-color: lighten($color-blue, 10%);
+      color: white;
+      font-size: $font-size-large;
+    }
+    
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  &__info {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    padding: $spacing-medium;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 2;
+    white-space: nowrap;
+    
+    &--make {
+      height: auto;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    h5 {
+      color: white;
+    }
+  }
+  
+  &__backboard {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: $color-grey-dark;
+    z-index: 1;
+  }
+  
+  &__brightness {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, 10%);
+    z-index: 3;
+    
+    &:hover {
+      background-color: rgba(black, 20%);
+      
+      & + .story__view > .story__thumbnail {
+        transform: scale(1.03);
+        transition: transform linear 0.1s;
+      }
+    }
+  }
+  
+  &__expand {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+}
+
+.post {
+  &__write {
+    display: flex;
+  }
+  
+  &__thinking {
+    margin-left: $spacing-small;
+    flex-grow: 1;
+    font-size: $font-size-regular + 2px;
+  }
+  
+  &__toggle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+    &-btn {
+      flex: 1 0 33%;
+      
+      span {
+        font-size: $font-size-regular + 2px;
+        font-weight: bold;
+        color: $color-grey-lighten;
+      }
+    }
+    
+  }
+  
+  &__icon {
+    font-size: $font-size-huge;
+    color: white;
+  }
+}
+
+.rooms {
+  display: flex;
+  align-items: center;
+
+  &__making {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: $spacing-large;
+    padding: $spacing-small+2px $spacing-medium;
+    border: 2px solid #263951;
+    border-radius: 20px;
+    background-color: transparent;
+  }
+  
+  &__icon {
+    background: linear-gradient(90deg, rgba(89,101,217,1) 0%, rgba(132,88,197,1) 35%, rgba(187,76,182,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: $font-size-large;
+  }
+  
+  &__profile {
+    transform: scale(1.2);
+  }
+  
+  &__text {
+    color: lighten($color-blue, 10%);
+    font-weight: bold;
+    font-size: $font-size-regular + 1px;
+  }
+  
+  &__list {
+    display: flex;
+  }
+  
+  &__item:not(:first-child){
+    margin-left: $spacing-large;
+  }
+}
+
+.posting {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__info {
+    display: flex;
+  }
+  
+  &__profile {
+    margin-right: $spacing-medium;
+  }
+  
+  &__head {
+    line-height: 130%;
+  }
+  
+  &__username {
+    transition: text-decoration;
+    color: white;
+    font-weight: bold;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  &__time {
+    color: $color-grey-lighten;
+    font-size: $font-size-medium;
+  }
+  
+  &__global {
+    color: $color-grey-lighten;
+    font-size: $font-size-medium;
+  }
+  
+  &__paragraph {
+    margin-top: $spacing-small;
+    color: white;
+  }
+  
+  &__appendix {
+    margin-top: $spacing-medium;
+  }
+  
+  &__comment {
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $spacing-small;
+    }
+    
+    &-expand {
+      background-color: transparent;
+      color: $color-grey-lighten;
+      font-size: $font-size-regular;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  &__emotion {
+    margin-right: $spacing-small;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #00ccff 0%, #0066ff 100%);
+    
+    &-wrap {
+      display: flex;
+      align-items: center;
+    }
+    
+    &-icon {
+      color: white;
+      font-size: $font-size-small;
+    }
+    
+    &-count {
+      color: $color-grey-lighten;
+      font-size: $font-size-regular;
+      
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: $spacing-medium;
+    padding: $spacing-small 0;
+    border-top: 2px solid $color-grey-light;
+    border-bottom: 2px solid $color-grey-light;
+  }
+  
+  &__action {
+    color: $color-grey-lighten;
+    font-size: $font-size-regular + 2px;
+    font-weight: bold;
+    flex: 1 0 33%;
+    
+    &-icon {
+      margin-right: $spacing-small;
+    }
+  }
+  
+  &__filter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    color: $color-grey-lighten;
+    font-size: $font-size-regular + 2px;
+    
+    &-wrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: $spacing-small;
+    }
+    
+    &-text {
+      margin-right: $spacing-small;
+      font-weight: bold;
+    }
+  }
+  
+  &__comment {
+    &-profile {
+      width: 30px !important;
+      height: 30px !important;
+      margin-top: $spacing-small;
+      margin-right: $spacing-small;
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  &__write {
+    margin-top: $spacing-medium;
+  
+    &-wrap {
+      display: flex;
+      margin-top: $spacing-medium;
+    }
+  }
+  
+  &__input {
+    width: 100%;
+    font-size: $font-size-regular;
+    
+    &-wrap {
+      width: 100%;
+      line-height: 80%;
+    }
+    
+    &-toggles {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+    
+    &-toggle {
+      background-color: transparent;
+    }
+    
+    &-icon {
+      color: $color-grey-lighten;
+      font-size: $font-size-large;
+      
+      .posting__input-toggle:not(&:first-child) & {
+        margin-left: $spacing-medium;
+      }
+    }
+    
+    &-text {
+      color: white;
+      font-size: $font-size-micro;
+    }
+  }
+  
+  &__written {
+    
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      padding: $spacing-small $spacing-medium;
+      border-radius: 15px;
+      background-color: $color-grey-light;
+    }
+    
+    &-user {
+      font-size: $font-size-medium + 1px;
+      color: white;
+    }
+    
+    &-text {
+      font-size: $font-size-regular;
+      color: white;
+    }
+    
+    &-toggles {
+      display: flex;
+      margin-left: $spacing-medium;
+    }
+    
+    &-toggle {
+      background-color: transparent;
+      color: $color-grey-lighten;
+      font-size: $font-size-medium;
+      font-weight: bold;
+      
+      &:not(:first-child) {
+        margin-left: $spacing-large;
+      }
+      
+      &:last-child {
+        color: darken($color-grey-lighten, 20%);
+      }
+    }
+  }
+}

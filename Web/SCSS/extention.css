@@ -1,0 +1,177 @@
+body {
+  font: 16px/1.5 "helvatica Neue";
+}
+
+.example {
+  color: red;
+}
+
+#navbar {
+  width: 80%;
+  height: 23px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: black;
+  background-image: url("");
+}
+#navbar ul {
+  list-style: none;
+}
+#navbar li {
+  font-size: 36px;
+}
+#navbar:hover {
+  background-color: blue;
+}
+
+div body, p body {
+  font: 16px/1.5 "helvatica Neue";
+}
+div .example, p .example {
+  color: red;
+}
+
+p {
+  background-color: yellow;
+}
+
+.input-red, .input-black {
+  font-size: 14px;
+}
+
+.input-black {
+  color: black;
+}
+
+.input-red {
+  color: red;
+}
+
+p {
+  color: blue;
+  font-size: 14px;
+}
+
+.item-1 {
+  width: 2em;
+  height: 2em;
+}
+
+.item-2 {
+  width: 4em;
+  height: 1em;
+}
+
+.item-3 {
+  width: 6em;
+  height: 0.6666666667em;
+}
+
+.apple-1 {
+  background-image: url("./images/apple.png");
+}
+
+.banana-2 {
+  background-image: url("./images/banana.png");
+}
+
+.lemon-3 {
+  background-image: url("./images/lemon.png");
+}
+
+.grape-4 {
+  background-image: url("./images/grape.png");
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+.item-1 {
+  width: 2em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+.item-3 {
+  width: 6em;
+}
+
+.item-4 {
+  width: 8em;
+}
+
+.item-5 {
+  width: 10em;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.border_radius {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.box {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.box {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  position: relative;
+  top: 10px;
+  right: 5px;
+  bottom: 5px;
+}
+
+.sidebar {
+  width: 214px;
+}
+
+/*@function grid-width($n){
+    @return $n * 5px;
+}
+
+.sidebar{
+    width: grid-width(5);
+}*/
+p {
+  color: white;
+}
+
+/*# sourceMappingURL=extention.css.map */

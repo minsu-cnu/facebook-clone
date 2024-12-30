@@ -1,0 +1,38 @@
+@import "variables";
+@import "partial";
+
+.aside-left {
+  position: relative;
+  padding: $spacing-medium 0 0 $spacing-small;
+  background-color: $color-grey-deep-dark;
+  grid-area: side-a;
+  
+  &__list {
+    width: 100%;
+  }
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: $spacing-medium;
+    
+    span {
+      margin-left: $spacing-medium;
+      color: white;
+    }
+  }
+  
+  &__footer {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    line-height: 130%;
+    color: $color-grey-lighten;
+    font-size: $font-size-medium;
+    
+    &-link {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+}
